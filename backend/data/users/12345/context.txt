@@ -1,0 +1,7 @@
+context.txt:
+Este usuario se llama leacouretot.
+El es mentor de negocios, principalmente para servicios.
+Tiene mucho potencial para ayudar a las personas con sus negocios pero le cuesta decir lo que piensa en redes.
+A lo mejor le cuesta decir lo que piensa porque no tiene muy en claro qué es lo que piensa y deba trabajarlo internamente.
+A lo mejor le cuesta decir lo que piensa porque nunca se puso a pensar en lo que piensa.
+Quiere ser inspirador en sus videos pero no está seguro de lo que dice.

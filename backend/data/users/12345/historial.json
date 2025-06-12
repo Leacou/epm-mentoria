@@ -1,0 +1,58 @@
+[
+  {
+    "role": "user",
+    "text": "hola"
+  },
+  {
+    "role": "model",
+    "text": "¡Hola Leacouretot! ¿Cómo estás hoy?\n\n¿Qué temas te gustaría abordar en esta sesión? ¿Hay algo en particular que te esté inquietando o en lo que te sientas trabado con tu negocio?\n"
+  },
+  {
+    "role": "user",
+    "text": "a que me comprometi la ultima vez?"
+  },
+  {
+    "role": "model",
+    "text": "¡Claro! La última vez te comprometiste a crear un contenido que hable sobre tus principios y valores, con fecha límite para el lunes 16 de junio de 2025. \n\n¿Cómo vas con eso? ¿Pudiste avanzar algo al respecto?\n"
+  },
+  {
+    "role": "user",
+    "text": "cuando dije eso?"
+  },
+  {
+    "role": "model",
+    "text": "Fue en la sesión anterior, donde estuvimos hablando de cómo conectar tus valores y principios con tu estrategia de contenido y la ley de atracción. Querías explorar cómo transmitir tus valores en un reel y cómo armar una historia con introducción, desarrollo y conclusión.\n\n¿Te parece que esta acción sigue siendo relevante para vos? ¿O te gustaría enfocar tu energía en otra cosa?\n"
+  },
+  {
+    "role": "user",
+    "text": "cuando dije eso? hace cuanto?"
+  },
+  {
+    "role": "model",
+    "text": "Revisando el registro, esa conversación la tuvimos el 11 de junio de 2025.\n\n¿Te sorprende que haya sido hace tan poco? ¿Hay algo que te haga dudar sobre ese compromiso?\n"
+  },
+  {
+    "role": "user",
+    "text": "te acordás que quería crear un canal en instagram? estoy por crearlo pero de nuevo me pasa eso que no sé qué temas hablar"
+  },
+  {
+    "role": "model",
+    "text": "Sí, me acuerdo de tu idea de crear un canal en Instagram para construir una comunidad de ayuda mutua. Entiendo que te frustre volver a sentir esa incertidumbre sobre qué temas abordar.\n\nPara entender mejor qué te está pasando, ¿podrías contarme qué tipo de contenido te gustaría crear en ese canal? ¿Qué te gustaría lograr con él?\n"
+  },
+  {
+    "role": "user",
+    "text": "me gustaria conectar con ellos entendiendo qué trabas están teniendo para crear contenido y/o servicios que los ayuden a avanzar"
+  },
+  {
+    "role": "model",
+    "text": "Entiendo. Te gustaría crear un espacio donde puedas conectar con otros emprendedores, entender sus dificultades y ofrecerles contenido y servicios que les ayuden a crecer.\n\n¿Y qué tipo de trabas crees que son las más comunes entre las personas que ofrecen servicios? ¿Qué preguntas te hacen o qué ves que les preocupa?\n"
+  },
+  {
+    "role": "user",
+    "text": "muchos no saben por dónde empezar, o cómo editar videos, o cómo crear contenido"
+  },
+  {
+    "role": "model",
+    "text": "Ok, entonces ves que hay una necesidad de orientación en temas básicos como la creación y edición de videos y la generación de contenido en general.\n\nPensando en esto, ¿qué podrías ofrecerles vos que sea diferente a lo que ya existe en el mercado? ¿Qué habilidades o conocimientos específicos tenés que podrían ser especialmente valiosos para ellos?\n"
+  }
+]
