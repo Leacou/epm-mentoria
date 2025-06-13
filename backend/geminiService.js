@@ -17,15 +17,11 @@ function getCurrentTimestamp() {
   };
 }
 
-function totalTokens(history) {
-  // Aproximación rápida: 1 token ≈ 4 caracteres
-  return history.reduce((acc, msg) => acc + Math.ceil(msg.text.length / 4), 0);
-}
 
-function detectarDisparador(history, prompt) {
+// Ahora acepta un tercer parámetro para eventos especiales, como el cierre de sesión
+function detectarDisparador(history, prompt, eventoSesion = null) {
+  if (eventoSesion === "fin_de_sesion") return "fin de sesión";
   if (prompt && prompt.trim() === "~resumen~") return "manual";
-  if (history.length > 50) return "cantidad de mensajes";
-  if (totalTokens(history) > 4000) return "cantidad de tokens";
   return null;
 }
 
@@ -67,8 +63,9 @@ ${history.map(m => `${m.role === 'user' ? 'Usuario' : 'Mentor'}: ${m.text}`).joi
 `;
 }
 
+// Esta ES la función correcta para el histórico de resúmenes como array
 async function resumirHistorial(ai, ig_id, history, disparador = "manual") {
-  const { campo: fechaCampo, archivo: fechaArchivo } = getCurrentTimestamp();
+  const { campo: fechaCampo } = getCurrentTimestamp();
   const resumenPrompt = buildResumenPrompt(history, fechaCampo, disparador);
 
   const chat = ai.chats.create({
@@ -126,13 +123,21 @@ ${resumenCrudo}
   if (!resumenJson.disparador) resumenJson.disparador = disparador;
   resumenJson.crudo = resumenCrudo;
 
-  // Guarda el resumen con timestamp único en el nombre del archivo
-  await fs.writeFile(__dirname + `/data/users/${ig_id}/resumen_${fechaArchivo}.json`, JSON.stringify(resumenJson, null, 2));
-  // Opcional: copia/actualiza el resumen "actual" para la lógica principal
-  await fs.writeFile(__dirname + `/data/users/${ig_id}/resumen.json`, JSON.stringify(resumenJson, null, 2));
+  // --- HISTÓRICO: Guardar todos los resúmenes como un array en resumen.json ---
+  let resumenes = [];
+  try {
+    const data = await fs.readFile(__dirname + `/data/users/${ig_id}/resumen.json`, "utf8");
+    resumenes = JSON.parse(data);
+    if (!Array.isArray(resumenes)) resumenes = [];
+  } catch (e) {
+    // Si no existe, arranca vacío
+    resumenes = [];
+  }
+  resumenes.push(resumenJson);
+  await fs.writeFile(__dirname + `/data/users/${ig_id}/resumen.json`, JSON.stringify(resumenes, null, 2));
 }
 
-async function askGemini({ ig_id, prompt }) {
+async function askGemini({ ig_id, prompt, eventoSesion = null }) {
   const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
   const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
@@ -151,12 +156,16 @@ async function askGemini({ ig_id, prompt }) {
   let resumenContext = "";
   try {
     const resumenJson = await fs.readFile(__dirname + `/data/users/${ig_id}/resumen.json`, "utf8");
-    const resumen = JSON.parse(resumenJson);
-    resumenContext = `\n\nResumen de sesiones previas (actualizado al ${resumen.fecha}):\n` +
-      Object.entries(resumen.temas).map(([tema, texto]) => `- ${tema}: ${texto}`).join('\n');
+    const resumenes = JSON.parse(resumenJson);
+    if (Array.isArray(resumenes) && resumenes.length > 0) {
+      const resumen = resumenes[resumenes.length - 1]; // último resumen
+      resumenContext = `\n\nResumen de sesiones previas (actualizado al ${resumen.fecha}):\n` +
+        Object.entries(resumen.temas).map(([tema, texto]) => `- ${tema}: ${texto}`).join('\n');
+    }
   } catch (e) {}
 
-  const disparador = detectarDisparador(history, prompt);
+  // Ahora acepta eventoSesion como tercer parámetro
+  const disparador = detectarDisparador(history, prompt, eventoSesion);
 
   if (disparador) {
     await resumirHistorial(ai, ig_id, history, disparador);

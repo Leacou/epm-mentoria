@@ -1,0 +1,25 @@
+[{
+  "fecha": "12/06/25 22:33",
+  "disparador": "manual",
+  "temas": {
+    "Objetivos": "No se mencionan objetivos específicos del usuario.",
+    "Problemas": "No se identifican problemas específicos del usuario.",
+    "Soluciones": "El mentor ofrece una estructura para la sesión, sugiriendo que se pueden revisar los objetivos del usuario, los problemas que enfrenta, buscar soluciones o identificar acciones concretas.",
+    "Acciones pactadas": "El mentor anota guardar el resumen de la sesión dentro del archivo `resumen.json` y no crear uno nuevo, agendándolo como pendiente para mañana.",
+    "Dudas o inquietudes": "No se mencionan dudas o inquietudes específicas del usuario."
+  },
+  "crudo": "```json\n{\n  \"fecha\": \"12/06/25 22:33\",\n  \"disparador\": \"manual\",\n  \"temas\": {\n    \"Objetivos\": \"No se mencionan objetivos específicos del usuario.\",\n    \"Problemas\": \"No se identifican problemas específicos del usuario.\",\n    \"Soluciones\": \"El mentor ofrece una estructura para la sesión, sugiriendo que se pueden revisar los objetivos del usuario, los problemas que enfrenta, buscar soluciones o identificar acciones concretas.\",\n    \"Acciones pactadas\": \"El mentor anota guardar el resumen de la sesión dentro del archivo `resumen.json` y no crear uno nuevo, agendándolo como pendiente para mañana.\",\n    \"Dudas o inquietudes\": \"No se mencionan dudas o inquietudes específicas del usuario.\"\n  }\n}\n```"
+},
+{
+  "fecha": "12/06/25 20:00",
+  "disparador": "manual",
+  "temas": {
+    "Objetivos": "Crear un carrusel de Instagram inspirador que motive a la audiencia a emprender y superar sus miedos.",
+    "Problemas": "Indecisión sobre qué frases elegir para el carrusel de Instagram y cómo redactarlas de manera coherente e impactante.",
+    "Soluciones": "Se sugirió agrupar las frases en categorías como 'Mentalidad de crecimiento', 'Superación de obstáculos' y 'Propósito y pasión' para facilitar la elección. También se propusieron reescrituras de frases para mejorar la claridad y coherencia, y se ofrecieron ideas para un cierre inspirador sin intención de venta.",
+    "Acciones pactadas": "No se identificaron acciones pactadas concretas con fecha límite.",
+    "Dudas o inquietudes": "El usuario no está seguro de cómo elegir las frases más impactantes y cómo redactar un cierre inspirador para el carrusel."
+  },
+  "crudo": "```json\n{\n  \"fecha\": \"12/06/25 20:00\",\n  \"disparador\": \"manual\",\n  \"temas\": {\n    \"Objetivos\": \"Crear un carrusel de Instagram inspirador que motive a la audiencia a emprender y superar sus miedos.\",\n    \"Problemas\": \"Indecisión sobre qué frases elegir para el carrusel de Instagram y cómo redactarlas de manera coherente e impactante.\",\n    \"Soluciones\": \"Se sugirió agrupar las frases en categorías como 'Mentalidad de crecimiento', 'Superación de obstáculos' y 'Propósito y pasión' para facilitar la elección. También se propusieron reescrituras de frases para mejorar la claridad y coherencia, y se ofrecieron ideas para un cierre inspirador sin intención de venta.\",\n    \"Acciones pactadas\": \"No se identificaron acciones pactadas concretas con fecha límite.\",\n    \"Dudas o inquietudes\": \"El usuario no está seguro de cómo elegir las frases más impactantes y cómo redactar un cierre inspirador para el carrusel.\"\n  }\n}\n```"
+}
+]
