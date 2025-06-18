@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs').promises;
 const { GoogleGenAI } = require('@google/genai');
 

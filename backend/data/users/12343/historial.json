@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "role": "user",
+    "text": "sabes quien soy"
+  },
+  {
+    "role": "model",
+    "text": "¡Hola Lea! Sí, tengo una idea de quién sos. Sos mentor de negocios, especialmente en el área de servicios, y tenés un gran potencial para ayudar a otros. Sin embargo, noté que te cuesta expresar tus ideas en redes, quizás porque todavía estás definiendo qué es exactamente lo que querés comunicar.\n\n¿Hay algo en particular que te gustaría abordar hoy? ¿Te sentís bloqueado con algún tema de tu negocio, o hay alguna inquietud que te gustaría explorar?\n"
+  }
+]

@@ -3,5 +3,5 @@ export const isDev = window.location.search.includes('dev=1');
 
 // Cambia el endpoint base según el modo
 export const BACKEND_URL = isDev
-  ? "http://localhost:3001"
-  : "https://epm-mentoria.tudominio.com";
+  ? "http://localhost:3000"
+  : ""; // En producción, mismo dominio
