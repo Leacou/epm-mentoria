@@ -1,7 +1,60 @@
 context.txt:
-Este usuario se llama leacouretot.
-El es mentor de negocios, principalmente para servicios.
-Tiene mucho potencial para ayudar a las personas con sus negocios pero le cuesta decir lo que piensa en redes.
-A lo mejor le cuesta decir lo que piensa porque no tiene muy en claro qué es lo que piensa y deba trabajarlo internamente.
-A lo mejor le cuesta decir lo que piensa porque nunca se puso a pensar en lo que piensa.
-Quiere ser inspirador en sus videos pero no está seguro de lo que dice.
+Este usuario se llama Karin.
+Ella es coach y quiere emprender como tal.
+Aún no tiene definido a su cliente ideal, el problema específico que resuelve ni el método en el que lo resuelve.
+Te voy a compartir algunas preguntas y respuestas de ella para que la conozcas y aprendas a qué se dedica.
+
+Pregunta 1:
+-¿Cómo podemos usar nuestras emociones (miedo, enojo, culpa) a nuestro favor, en lugar de dejar que nos controlen? (Relacionado con su trabajo en el manejo de emo-ciones)
+Respuesta Karin 1:
+-Las emociones son una reaccion a como interpretamos lo que pasa y no a lo que pasa en sí. Aparecen para informarnos algo que nos conviene saber. No estan para ser tapadas ni corregidas sino para ser reconocidas.
+Si hay emocion es porque seguro hay algo valioso en juego, un deseo o un miedo, o un cambio que hay que hacer. Algunas nos muestran necesidades, limites, heridas y otras muestran lo que hicimos bien, lo que nos alegra, lo que nos empodera. Para usar la emoción a nuestro favor la pregunta no es como evitarlas sino, que me estan mostrando. Que ganas?. Al entender que te pasa dejas de reaccionar, para elegir como responder. Dejas de pelear con lo que sentis para escucharte, y pasas de ser victima de tus emociones a ser protagonista de lo que haces con ellas.
+
+Pregunta 2:
+-Si pudiéramos "revisar" nuestra historia personal, ¿qué aspectos serían más importantes para comprender cómo se han formado nuestros filtros y nuestra forma de interpretar la realidad? (Explora cómo la historia personal influye en la percepción).
+Respuesta Karin 2:
+-La personas no vemos la realidad como es, hacemos nuestra propia in-terpretacion de la realidad. Porque para cada uno la vemos a traves del filtro de nuestra historia personal, nuestras experiencias de vida, educación, entorno, familia, contexto. Interpretar es fabricar nuestra propia historia sobre lo que vemos y esa historia pasa a ser "nuestra realidad" interna, la que moldea como somos, sentimos y hacemos y por eso todos vemos el mundo distinto. Una misma situacion puede hacerte sufrir o darte paz, segun como la interpretes. Nuestra forma de interpretar literalmente puede cambiar nuestra forma de vivir.
+
+Pregunta 3:
+-¿Por qué la gente le tiene miedo a la incertidumbre?
+Respuesta Karin 3:
+-La incertidumbre no es el problema en sí, sino lo que nos imaginamos que puede suceder en la incertidumbre. Aprendimos a sentirnos seguros solo cuando controlam-os. Pero la verdad es, que la vida nunca estuvo bajo control. La incertidumbre da miedo porque nos obliga a confiar y confiar es soltar la ilusion de control. Queremos certezas para sentir seguridad, pero las certezas tambien limitan. La incertidumbre aunque no lo parezca tambien es posibilidad. Sin ella todo seria previsible y aburri-do. Es donde nace la creatividad, la innovacion. Cuando no SABES QUE VA A PASAR- PRESTAS MAS ATENCION y eso te hace estar mas conciente. En lo incierto te vuelvesflexible, adaptable y aparece una fuerza que no sabias que tenias. Te enseña a confiar en vos, en los otros y en el proceso. Que posibilidad podrias ver si no necesitaras garantias?
+
+Pregunta 4:
+-¿Qué es ser autentico para Karin?
+Respuesta Karin 4:
+-Empiezo alrevez.. No ser autentico lleva mucho mas dificil y lleva mas esfuerzo, en-ergia y sufrimiento que ser autentico.
+Ser autentico es ser real, es ser quien soy con todo lo que ser yo implique. No debe-ría ser mas complicado que eso, aunque es cierto que no es facil. Mantenerse auten-tico en un mundo que nos empuja a encajar o agradar para pertenecer. Se necesita coraje, autoconocimiento para para sostener lo que sos y conexion con vos mism@ para saber cuando te estas traicionando y cuando no. La autenticidad es algo que se elije, se cultiva y se cuida... poniendo limites. Igual creo que ya somos geniales solo que no nos damos cuenta.
+
+Pregunta 5:
+-¿Cuál es la diferencia entre "pensar diferente" y simplemente "pensar positivo"? (Relacionado con su ayuda para "Pensar diferente para sentir diferente.")
+Respuesta Karin 5:
+-Pensar positivo es una actitud. Es ver el lado bueno, encontrar lo constructivo, mantener el animo arriba.
+Pensar diferente, es una ruptura. Es cuestionar la forma en que siempre pensastes, salir del molde, ver mas alla de lo que veias.. Pensar diferente inevitablemente lleva a sensaciones, acciones y resultados diferentes.., es como el efecto domino, cambio yo y todo lo demas cambia.
+
+
+Pregunta 6:
+-¿Cómo un cambio en nuestros pensamientos puede afectar nuestras emociones y nuestra forma de actuar? (Busca un ejemplo práctico para ilustrar la conexión entre mente, emoción y cuerpo)
+Respuesta Karin 6:
+-Lo que pensamos, lo que sentimos y lo que hacemos no son tres acciones independientes, estan conectadas entre si de forma circular.
+Lo que pienso genera como me siento, acorde a como siento actuo y como actuo define mi resultado.
+Por ejemplo: -Si mi Pensamiento es "Tengo que hacerlo perfecto" mi emocion sera ansiedad, exigencia y mi Accion sera Postergar, corregir mil veces o no empezar. Si cambio mi pensamiento a "Como puedo hacer esto posible", la emocion que resulta sera Motivacion y confianza y mi accion sera empezar, avanzar y terminar lo que empece, aunque no sea perfecto.
+Al cambiar como pienso, como siento o como actuo todo cambia.
+
+Pregunta 7:
+- ¿Cuál es la diferencia entre Mente y Cerebro? ¿Y de qué le puede servir a las personas saber eso? (Busca mostrar los beneficios de tener este tipo de conocimien-to)
+Respuesta Karin 7:
+-La mente es el espacio donde armamos y organizamos nuestras pensamientos, creencias, habitos y donde se guarda nuestras memorias.
+El cerebro ejecuta lo que la mente piensa. Cada pensamiento, cadaemocion activan circuitos en el cerebro que se traducen en estados fisicos. Lo que pensas y sentis se vuelve biologico, se siente en el cuerpo. El cerebro tambien automatiza lo que repetidamente pensamos para que ese patron se repita sin esfuerzo, incluso si son limitantes.
+Conclusion, la mente escribe el guion y el cerebro lo convierte en experiencia real.
+
+Pregunta 8: 
+-Si la mente es como un sistema operativo, ¿qué "actualizaciones" deberíamos hacerle para optimizar nuestro rendimiento? (Ligado a "Tu forma de pensar es el sistema operativo con el que procesas la realidad.")
+Respuesta Karin 8: La mente es el sistema operativo donde armamos y organizamos nuestros pensamientos, creencias, emociones e interpretaciones. Como nosotros no pensamos, creemos ni sentimos igual que hace 1, 2 o 10 anios, necesitamos actualizar nuestro sistema operativo para que sea fiel a nuestra forma de pensar hoy Que pasa si no lo hacemos? Nuestros modelos viejos de Ser, van a condicionar nuestra como percibimos hoy, seria como ver el mundo a travez de un cristal colocado en otras epocas.
+Al actualizarnos podemos elegir que creencias, pensamientos o habitos queremos sostener y cuales ya no nos representan hoy.
+Todo crecimiento proviene de actualizar nuestro sistema de vida.
+
+Pregunta 9:
+- ¿Cómo podemos transformar nuestras limitaciones en posibilidades?
+Respuesta Karin 9:
+-Lo primero a saber es, que un pensamiento o una creencia tienen el poder de abrir o cerrarnos posibilidades en nuestra vida. Cada pensamiento y emocion son ordenes para el cerebro. Por ejemplo si yo pienso, "No puedo hacer esto.." el cerebro no dis-tingue si es realidad o fantasia, lo toma como verdad y ordena a tu cuerpo y emo-cion que te acompanien el pensamiento "no poder". Tu emocion sera Inseguridad, resignacion, tu cuerpo se va a contraer y tu comportamiento sera abandonar o evitar hacer. Si cambias ese pensamiento por otro, "Como puedo hacer esto posible".la emo-cion sera motivacion y tu comportamiento sera buscar opciones y avanzar. Pora transformar limitaciones en posibilidades, 1-Escucha tu pensamiento. 2-Detecta que historia te estas contando sobre el hecho y que te decis a vos mism@. 3-Revisa y transforma la historia y tu narrativa por otra que que te abra posibilidades en vez de cerrarlas.

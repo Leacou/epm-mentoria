@@ -40,7 +40,7 @@ router.post('/init', (req, res) => {
   res.json({
     ok: true,
     message: ig_name
-      ? `¡Hola @${ig_name}!. Para empezar di "hola".`
+      ? `¡Hola @${ig_name}!. Para empezar di "Hola, ¿Qué sabes sobre mi?".`
       : `¡Hola! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`
   });
 });
