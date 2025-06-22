@@ -6,5 +6,13 @@
   {
     "role": "model",
     "text": "¡Hola Lea! Sí, tengo una idea de quién sos. Sos mentor de negocios, especialmente en el área de servicios, y tenés un gran potencial para ayudar a otros. Sin embargo, noté que te cuesta expresar tus ideas en redes, quizás porque todavía estás definiendo qué es exactamente lo que querés comunicar.\n\n¿Hay algo en particular que te gustaría abordar hoy? ¿Te sentís bloqueado con algún tema de tu negocio, o hay alguna inquietud que te gustaría explorar?\n"
+  },
+  {
+    "role": "user",
+    "text": "que sabes sobre mi"
+  },
+  {
+    "role": "model",
+    "text": "Además de lo que ya te mencioné, sé que estás buscando ser una fuente de inspiración en tus videos, pero a veces te sentís inseguro sobre el mensaje que transmitís. También tengo presente que en la sesión anterior estuviste trabajando en un carrusel de Instagram para motivar a la audiencia a emprender, y te encontraste con algunas dificultades para elegir las frases y redactar un cierre impactante.\n\n¿Hay algo más específico sobre lo que te gustaría que recordemos? ¿O preferís que nos enfoquemos en algún otro tema hoy?\n"
   }
 ]

@@ -1,51 +1,82 @@
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
-
 const router = express.Router();
 
-const USERS_BASE_PATH = path.join(__dirname, 'data', 'users');
+const {
+  askGemini,
+  leerCredenciales,
+  guardarCredenciales,
+  leerContextoUsuario,
+  leerUltimoResumen,
+  generarMensajePersonalizado
+} = require('./geminiService');
 
-// Inicializa archivos y carpetas para el usuario y responde con mensaje de bienvenida
-router.post('/init', (req, res) => {
+router.post('/init', async (req, res) => {
   const { ig_id, ig_name, ig_picture, long_lived_token } = req.body;
   if (!ig_id) return res.status(400).json({ error: 'Falta ig_id' });
 
-  // 1. Crea la carpeta del usuario si no existe
-  const userDir = path.join(USERS_BASE_PATH, ig_id);
-  if (!fs.existsSync(userDir)) fs.mkdirSync(userDir, { recursive: true });
-
-  // 2. Crea credentials.json con todos los datos
-  const credentialsFile = path.join(userDir, 'credentials.json');
-  if (!fs.existsSync(credentialsFile)) {
-    fs.writeFileSync(
-      credentialsFile,
-      JSON.stringify({ ig_id, ig_name, ig_picture, long_lived_token }, null, 2)
-    );
+  let esNuevo = false;
+  try {
+    const existe = await leerCredenciales(ig_id);
+    if (!existe) {
+      await guardarCredenciales({ ig_id, ig_name, ig_picture, long_lived_token });
+      esNuevo = true;
+    }
+  } catch (e) {
+    return res.status(500).json({ error: 'No se pudo consultar/guardar credenciales', details: e.message });
   }
 
-  // 3. Crea historial.json vacío si no existe
-  const historyFile = path.join(userDir, 'historial.json');
-  if (!fs.existsSync(historyFile)) fs.writeFileSync(historyFile, '[]');
+  // Si es usuario nuevo
+  if (esNuevo) {
+    return res.json({
+      ok: true,
+      message: ig_name
+        ? `¡Hola @${ig_name}! Bienvenido/a a tu espacio de mentoría. Para empezar, contame sobre tu negocio, tus objetivos, dudas o desafíos actuales.`
+        : `¡Hola! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`
+    });
+  }
 
-  // 4. Crea context.txt personalizado si no existe
-  const contextFile = path.join(userDir, 'context.txt');
-  if (!fs.existsSync(contextFile)) {
-    fs.writeFileSync(
-      contextFile,
-      `Contexto base personalizado para IG ${ig_id} (${ig_name || ""})`
-    );
+  // Si es usuario existente, busca el último resumen y genera mensaje personalizado
+  let resumenObj = null;
+  try {
+    const resumen = await leerUltimoResumen(ig_id);
+    if (resumen && resumen.contenido) {
+      try {
+        resumenObj = typeof resumen.contenido === "string"
+          ? JSON.parse(resumen.contenido)
+          : resumen.contenido;
+      } catch (err) {
+        resumenObj = resumen.contenido || resumen.resumen;
+      }
+    }
+  } catch (e) {
+    // Si falla igual puede continuar, resumenObj queda como null
+  }
+
+  let mensajePersonalizado = "";
+  if (resumenObj) {
+    try {
+      console.log('[DEBUG] Llamando a generarMensajePersonalizado con:', {ig_name, resumenObj, ig_id});
+      mensajePersonalizado = await generarMensajePersonalizado({
+        nombre: ig_name,
+        resumen: resumenObj,
+        ig_id
+      });
+      console.log('[DEBUG] Mensaje personalizado generado:', mensajePersonalizado);
+    } catch (e) {
+      console.error('[ERROR] No se pudo generar mensaje personalizado:', e);
+      mensajePersonalizado = "¡Hola de nuevo! No pude generar un mensaje personalizado, pero puedes retomar tu mentoría cuando quieras.";
+    }
+  } else {
+    mensajePersonalizado = ig_name
+      ? `¡Hola de nuevo @${ig_name}! No encontramos un resumen previo, pero puedes contarme en qué te gustaría avanzar hoy.`
+      : `¡Hola de nuevo! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`;
   }
 
   res.json({
     ok: true,
-    message: ig_name
-      ? `¡Hola @${ig_name}!. Para empezar di "Hola, ¿Qué sabes sobre mi?".`
-      : `¡Hola! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`
+    message: mensajePersonalizado
   });
 });
-
-const { askGemini } = require('./geminiService');
 
 router.post('/ask', async (req, res) => {
   const { ig_id, prompt } = req.body;

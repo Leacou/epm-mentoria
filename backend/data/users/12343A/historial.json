@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "text": "Hola, ¿Qué sabes sobre mi?"
+  },
+  {
+    "role": "model",
+    "text": "¡Hola! Sé que sos leacouretot2 y que te interesa el desarrollo de negocios.\n\nPara arrancar, ¿qué temas te gustaría que charlemos hoy? ¿Hay algo en particular que te esté dando vueltas en la cabeza sobre tu negocio, alguna duda o inquietud que te gustaría explorar? O si preferís, podemos enfocarnos en tus objetivos a corto o largo plazo.\n"
+  }
+]
