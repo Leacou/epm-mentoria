@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <title>Mentoría EPM</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.4/dist/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.4/dist/quill.min.js"></script>
   <script type="module" src="mentoria.js"></script>
 </head>
 <body>
   <main>
-    <h2 id="bienvenida">Cargando...</h2>
+    <div id="user-header">
+      <img id="user-avatar" src="" alt="Foto usuario" />
+      <span id="user-name"></span>
+    </div>
+    <div id="loading-message">Cargando bot de EPM Mentoria...</div>
+    <div id="bienvenida"></div>
     <div id="chat-container">
       <div id="chat-area"></div>
+      <div id="quill-container"></div>
       <form id="chat-form">
-        <input type="text" id="user-input" placeholder="Escribe tu mensaje..." autocomplete="off">
         <button type="submit">Enviar</button>
       </form>
-      
     </div>
   </main>
-    <!-- Incluye el script de cierre de sesión aquí -->
-    <script src="sesion-cierre.js"></script></body>
+  <script src="sesion-cierre.js"></script>
+</body>
 </html>
