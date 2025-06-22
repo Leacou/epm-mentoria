@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Agrega el proxy de avatar aquí
+const avatarProxy = require('./avatarProxy');
+app.use('/api', avatarProxy);
+
 console.log('Intentando cargar routers...');
 try {
   const mentoriaRouter = require('./mentoriaRouter');

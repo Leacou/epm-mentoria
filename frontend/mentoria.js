@@ -6,10 +6,49 @@ const ig_name = params.get('ig_name');
 const ig_picture = params.get('ig_picture');
 const long_lived_token = params.get('long_lived_token');
 
+// Helper para inicial
+function getInitial(name) {
+  if (!name || typeof name !== 'string') return '?';
+  return name.trim()[0].toUpperCase();
+}
+
+// Helper para construir la URL del proxy
+function getAvatarUrl(url) {
+  if (!url) return null;
+  return `${BACKEND_URL}/api/proxy-avatar?url=${encodeURIComponent(url)}`;
+}
+
+// Renderiza el avatar: imagen si carga, si no, círculo con inicial
+function setUserAvatar(url, name) {
+  const avatarImg = document.getElementById('user-avatar');
+  const avatarFallback = document.getElementById('user-avatar-fallback');
+  const initial = getInitial(name);
+
+  // Reset fallback
+  avatarFallback.textContent = initial;
+  avatarFallback.style.display = 'none';
+
+  if (!url) {
+    avatarImg.style.display = 'none';
+    avatarFallback.style.display = 'flex';
+    return;
+  }
+  avatarImg.src = getAvatarUrl(url);
+  avatarImg.style.display = 'block';
+
+  avatarImg.onerror = function() {
+    this.style.display = 'none';
+    avatarFallback.style.display = 'flex';
+  };
+  avatarImg.onload = function() {
+    avatarImg.style.display = 'block';
+    avatarFallback.style.display = 'none';
+  };
+}
+
 // Renderiza foto y nombre usuario si existen
 if (ig_name) document.getElementById('user-name').textContent = '@' + ig_name;
-if (ig_picture) document.getElementById('user-avatar').src = ig_picture;
-else document.getElementById('user-avatar').src = 'placeholder.png'; // Asegúrate de tener este archivo
+setUserAvatar(ig_picture, ig_name);
 
 if (!ig_id) {
   document.getElementById('bienvenida').innerHTML = '<b>Error:</b> falta identificación de usuario Instagram.';
@@ -54,6 +93,24 @@ const quill = new Quill('#quill-container', {
 const chatForm = document.getElementById('chat-form');
 const chatArea = document.getElementById('chat-area');
 
+// Helper para generar el avatar html
+function chatAvatarHTML(url, name, className = '') {
+  const initial = getInitial(name);
+  const avatarUrl = getAvatarUrl(url);
+  // Si hay URL, pone la imagen y fallback con inicial oculta
+  // Si no hay URL, solo el círculo con la inicial
+  if (avatarUrl) {
+    return `<span class="avatar-wrapper">
+      <img src="${avatarUrl}" class="avatar ${className}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+      <span class="avatar-fallback ${className}" style="display:none;">${initial}</span>
+    </span>`;
+  } else {
+    return `<span class="avatar-wrapper">
+      <span class="avatar-fallback ${className}" style="display:flex;">${initial}</span>
+    </span>`;
+  }
+}
+
 if (chatForm) {
   chatForm.addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -62,9 +119,9 @@ if (chatForm) {
     // Evita mensajes vacíos o solo con salto de línea
     if (!prompt || prompt === '<p><br></p>') return;
 
-    // Muestra el mensaje del usuario en el chat (puedes agregar avatar si quieres)
+    // Muestra el mensaje del usuario en el chat (usa proxy y onerror para fallback)
     chatArea.innerHTML += `<div class="chat-bubble user-msg">
-      <img src="${ig_picture || 'placeholder.png'}" class="avatar"/>
+      ${chatAvatarHTML(ig_picture, ig_name)}
       <span>${prompt}</span>
     </div>`;
 

@@ -11,7 +11,10 @@
 <body>
   <main>
     <div id="user-header">
-      <img id="user-avatar" src="" alt="Foto usuario" />
+      <span class="avatar-wrapper">
+        <img id="user-avatar" src="" alt="Foto usuario" style="display:block;" />
+        <span id="user-avatar-fallback" class="avatar-fallback" style="display:none;"></span>
+      </span>
       <span id="user-name"></span>
     </div>
     <div id="loading-message">Cargando bot de EPM Mentoria...</div>

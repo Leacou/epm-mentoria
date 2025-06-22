@@ -12,24 +12,64 @@ main {
   padding: 2em;
   box-shadow: 0 4px 12px #0001;
 }
+
+/* HEADER: Avatar + Nombre */
 #user-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 10px;
 }
-#user-avatar {
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  position: relative;
+}
+
+/* Avatar imagen y fallback, ambos mismos estilos, alternan display */
+#user-avatar,
+.avatar-fallback {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #eee;
+  border: 1.5px solid #fff;
+  box-shadow: 0 1px 4px #0001;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+#user-avatar {
+  background: #fff;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-fallback {
+  background: #ff9800;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.45em;
+  letter-spacing: 0;
+  /* Centrado perfecto con flex, sin position absolute */
+}
+
+/* Nombre de usuario alineado verticalmente */
 #user-name {
   font-weight: bold;
   color: #222;
   font-size: 1.1em;
+  line-height: 1;
 }
+
+/* Bienvenida */
 #bienvenida {
   font-size: 1.1em;
   margin-bottom: 1.2em;
@@ -40,6 +80,8 @@ main {
   font-weight: 400;
   line-height: 1.5;
 }
+
+/* Chat */
 #chat-container {
   min-height: 200px;
   margin-bottom: 1em;
@@ -82,15 +124,29 @@ main {
 .model-msg b {
   color: #ff9800;
 }
-.avatar {
+
+/* Chat avatar chico */
+.avatar,
+.avatar-fallback.avatar {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  vertical-align: middle;
+  font-size: 1.1em;
   margin-right: 7px;
-  object-fit: cover;
-  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: #ff9800;
+  color: #fff;
+  border: 1.5px solid #fff;
+  box-shadow: 0 1px 4px #0001;
+  padding: 0;
+  font-family: inherit;
+  user-select: none;
 }
+
+/* Formulario chat */
 #chat-form {
   display: flex;
   gap: 0.5em;
@@ -103,6 +159,8 @@ main {
   border: 1px solid #ccc;
   font-size: 1em;
 }
+
+/* Botón */
 button {
   padding: 0.5em 1em;
   border-radius: 4px;
@@ -116,11 +174,15 @@ button {
 button:hover, button:focus {
   background: #ffab3c;
 }
+
+/* Mensaje error */
 .model-msg.error {
   background: #ffeaea;
   color: #c00;
   border: 1px solid #fff3f3;
 }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   background: #eee;
@@ -130,6 +192,7 @@ button:hover, button:focus {
   border-radius: 4px;
 }
 
+/* Loading */
 #loading-message {
   text-align: center;
   font-size: 1.1em;
