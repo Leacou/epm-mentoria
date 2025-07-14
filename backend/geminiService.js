@@ -326,7 +326,7 @@ async function generarMensajePersonalizado({ nombre, resumen, ig_id }) {
 
     // 2. Armá el prompt
     const prompt = `
-Eres un mentor virtual que ayuda a usuarios a avanzar en sus procesos y objetivos.
+Eres un mentor virtual que ayuda a usuarios a avanzar en sus objetivos.
 Ten en cuenta estos dos contextos:
 --- CONTEXTO BASE ---
 ${contextBase}
@@ -340,7 +340,7 @@ ${typeof resumen === "string" ? resumen : JSON.stringify(resumen, null, 2)}
 Tu tarea:
 - Genera un mensaje de bienvenida personalizado para ${nombre ? "@" + nombre : "el usuario"}.
 - Comenta los temas o acciones más relevantes según el resumen.
-- Haz una pregunta para avanzar, o sugiere retomar algún punto pendiente si corresponde.
+- Haz una pregunta inicial para identificar cuál es el punto de partida del usuario.
 - Usa un tono cercano y motivador.
 - Si hay acciones pactadas pendientes, recuérdaselas.
 - Responde solo con el mensaje que verá el usuario.
