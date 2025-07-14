@@ -340,7 +340,7 @@ ${typeof resumen === "string" ? resumen : JSON.stringify(resumen, null, 2)}
 Tu tarea:
 - Genera un mensaje de bienvenida personalizado para ${nombre ? "@" + nombre : "el usuario"}.
 - Comenta los temas o acciones más relevantes según el resumen.
-- Haz una pregunta para avanzar, o sugiere retomar algún punto pendiente si corresponde.
+- Haz una pregunta para identificar cuál es su punto de partida y poder guiarlo en sus próximos pasos.
 - Usa un tono cercano y motivador.
 - Si hay acciones pactadas pendientes, recuérdaselas.
 - Responde solo con el mensaje que verá el usuario.
