@@ -338,8 +338,9 @@ ${contextUsuario}
 ${typeof resumen === "string" ? resumen : JSON.stringify(resumen, null, 2)}
 
 Tu tarea:
-- Genera un mensaje de bienvenida personalizado para ${nombre ? "@" + nombre : "el usuario"} que identifique cuál es su punto de partida para poder guiarlo en sus próximos pasos.
+- Genera un mensaje de bienvenida personalizado para ${nombre ? "@" + nombre : "el usuario"}.
 - Comenta los temas o acciones más relevantes según el resumen.
+- Haz una pregunta para avanzar, o sugiere retomar algún punto pendiente si corresponde.
 - Usa un tono cercano y motivador.
 - Si hay acciones pactadas pendientes, recuérdaselas.
 - Responde solo con el mensaje que verá el usuario.
