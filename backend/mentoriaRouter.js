@@ -68,7 +68,7 @@ router.post('/init', async (req, res) => {
     }
   } else {
     mensajePersonalizado = ig_name
-      ? `¡Hola ${ig_name}! ¿Me querés contar en qué te gustaría avanzar hoy de tu negocio? ¿Tienes alguna traba o algo específico que te gustaría trabajar?.`
+      ? `¡Hola ${ig_name}! ¿Me querés contar primero si ya estás emprendiendo o si te gustaría empezar a emprender? ¿Tienes alguna traba o algo específico en lo que te gustaría trabajar hoy?.`
       : `¡Hola de nuevo! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`;
   }
 
