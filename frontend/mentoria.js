@@ -1,10 +1,34 @@
 import { BACKEND_URL } from './config.js';
 
+// --- INICIO LÓGICA PARA IG_ID ÚNICO DE INVITADO ---
+function getOrCreateGuestId() {
+  const GUEST_ID_KEY = 'epm_guest_ig_id';
+  // Si ya existe en localStorage, úsalo
+  let guestId = localStorage.getItem(GUEST_ID_KEY);
+  if (guestId) return guestId;
+  // Si no, genera uno aleatorio y guárdalo
+  guestId = 'user_' + Math.random().toString(36).substr(2, 9);
+  localStorage.setItem(GUEST_ID_KEY, guestId);
+  return guestId;
+}
+
+// Obtiene los parámetros de la URL
 const params = new URLSearchParams(window.location.search);
-const ig_id = params.get('ig_id');
-const ig_name = params.get('ig_name');
-const ig_picture = params.get('ig_picture');
-const long_lived_token = params.get('long_lived_token');
+let ig_id = params.get('ig_id');
+let ig_name = params.get('ig_name');
+let ig_picture = params.get('ig_picture');
+let long_lived_token = params.get('long_lived_token');
+
+// Si ig_id es "gratis", "GENERAR", "{gratis}", o vacío, usamos/generamos uno único
+if (!ig_id || ig_id === 'gratis' || ig_id === '{gratis}' || ig_id === 'GENERAR') {
+  ig_id = getOrCreateGuestId();
+  // Opcional: si quieres que la URL cambie para reflejar el nuevo ig_id (esto ayuda si el usuario guarda la URL)
+  params.set('ig_id', ig_id);
+  const newUrl = window.location.pathname + '?' + params.toString();
+  window.history.replaceState({}, '', newUrl);
+}
+
+// --- FIN LÓGICA IG_ID INVITADO ÚNICO ---
 
 // Helper para inicial
 function getInitial(name) {
