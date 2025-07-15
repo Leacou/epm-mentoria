@@ -30,7 +30,7 @@ router.post('/init', async (req, res) => {
     return res.json({
       ok: true,
       message: ig_name
-        ? `¡Hola @${ig_name}! Bienvenido/a a tu espacio de mentoría. Para empezar, contame sobre tu negocio, tus objetivos, dudas o desafíos actuales.`
+        ? `¡Hola @${ig_name}! Bienvenido/a a tu espacio de mentoría. Para empezar, contame sobre tu idea de emprendimiento, tus objetivos, dudas o desafíos actuales.`
         : `¡Hola! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`
     });
   }
