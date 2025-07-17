@@ -30,7 +30,7 @@ router.post('/init', async (req, res) => {
     return res.json({
       ok: true,
       message: ig_name
-        ? `¡Hola @${ig_name}! Bienvenido/a a tu espacio de mentoría. Para empezar, contame sobre tu idea de emprendimiento, tus objetivos, dudas o desafíos actuales.`
+        ? `¡Hola @${ig_name}! Bienvenido/a a tu espacio de mentoría. Para empezar, ¿Me querés contar primero si ya estás emprendiendo o si te gustaría empezar a emprender? ¿Tenés alguna traba o algo específico en lo que te gustaría trabajar hoy?.`
         : `¡Hola! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`
     });
   }
@@ -68,7 +68,7 @@ router.post('/init', async (req, res) => {
     }
   } else {
     mensajePersonalizado = ig_name
-      ? `¡Hola ${ig_name}! ¿Me querés contar primero si ya estás emprendiendo o si te gustaría empezar a emprender? ¿Tienes alguna traba o algo específico en lo que te gustaría trabajar hoy?.`
+      ? `¡Hola de nuevo ${ig_name}! ¿Me querés contar primero si ya estás emprendiendo o si te gustaría empezar a emprender? ¿Tienes alguna traba o algo específico en lo que te gustaría trabajar hoy?.`
       : `¡Hola de nuevo! No pude cargar el nombre de tu cuenta de instagram. Escribe a hola@epm-marketing.com indicando tu IG id=${ig_id}.`;
   }
 
